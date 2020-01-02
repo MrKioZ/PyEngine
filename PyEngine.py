@@ -1,5 +1,6 @@
+from mysql.connector import MySQLConnection, Error
 from requests import get
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, SoupStrainer
 import random
 
 class Crawler:
