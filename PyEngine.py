@@ -81,10 +81,10 @@ class Crawler:
             by connect to the database each time we call the function
             it cancels the timeout from mysql server
             """
-            conn = connect(host='localhost',
-                            database='db_google',
-                            user='root',
-                            password='root')
+            conn = connect(host=self.host,
+                            database=self.database,
+                            user=self.user,
+                            password=self.password)
 
             cursor = conn.cursor()
             cursor.execute(query, args)
