@@ -5,6 +5,22 @@ import random
 
 class Crawler:
 
+    host = 'localhost'
+    database = 'db_google'
+    user = 'root'
+    password = 'root'
+
+    def __init__(self, host=None,database=None,user=None,password=None):
+        if host:
+            self.host = host
+        if database:
+            self.database = database
+        if user:
+            self.user = user
+        if password:
+            self.password = password
+    
+    
     def Crawl(self, url):
 
         with get(url) as response:
